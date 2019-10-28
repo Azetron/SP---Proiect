@@ -1,3 +1,4 @@
+package l4;
 
 public class Table implements Element{
 	public String Nume;

@@ -1,3 +1,6 @@
+package l4;
+
+import java.util.concurrent.TimeUnit;
 
 public class Image implements Element{
 	public String Nume;
@@ -5,6 +8,11 @@ public class Image implements Element{
 	public Image() {}
 	public Image(String N) {
 		this.Nume = N;
+		try {
+			TimeUnit.SECONDS.sleep(5);
+			} catch (InterruptedException e) {
+			e.printStackTrace();
+			}
 	}
 	public String getNume() {
 		return Nume;
