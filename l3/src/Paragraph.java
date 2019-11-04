@@ -1,7 +1,9 @@
-package l4;
+package l6;
 
 public class Paragraph implements Element{
 	public String Nume;
+	public AlignStrategy As;
+	
 	
 	public Paragraph() {}
 	public Paragraph(String N) {
@@ -18,7 +20,15 @@ public class Paragraph implements Element{
 	}
 	
 	public void print() {
-		System.out.println(Nume);
+		if(As == null) {
+			System.out.println(Nume);
+		}
+		else {
+			As.print(Nume);
+		}
 		
+	}
+	public void setAlignStrategy(AlignStrategy As) {
+		this.As=As;
 	}
 }

@@ -1,4 +1,4 @@
-package l4;
+package l6;
 
 public class ImageProxy implements Element{
 		public String Nume;
