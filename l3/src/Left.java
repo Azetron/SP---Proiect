@@ -1,4 +1,4 @@
-package l6;
+package l3;
 
 public class Left implements AlignStrategy{
 		

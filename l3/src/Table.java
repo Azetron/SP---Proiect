@@ -1,4 +1,4 @@
-package l6;
+package l3;
 
 public class Table implements Element{
 	public String Nume;
@@ -21,4 +21,10 @@ public class Table implements Element{
 		System.out.println(Nume);
 		
 	}
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
+		
+	}
+	
 }

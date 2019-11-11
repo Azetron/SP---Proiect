@@ -1,4 +1,4 @@
-package l6;
+package l3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +29,15 @@ public class Section implements Element{
 			System.out.println(Title);
 			for(var e : e1) {
 				e.print();
+			}
+			
+		}
+	
+		
+		@Override
+		public void accept(Visitor v) {
+			for(var e : e1) {
+				e.accept(v);
 			}
 			
 		}

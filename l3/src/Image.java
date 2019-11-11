@@ -1,6 +1,6 @@
-package l6;
+package l3;
 
-import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 public class Image implements Element{
 	public String Nume;
@@ -8,11 +8,12 @@ public class Image implements Element{
 	public Image() {}
 	public Image(String N) {
 		this.Nume = N;
-		try {
+		/*try {
 			TimeUnit.SECONDS.sleep(5);
 			} catch (InterruptedException e) {
 			e.printStackTrace();
 			}
+			*/
 	}
 	public String getNume() {
 		return Nume;
@@ -28,4 +29,10 @@ public class Image implements Element{
 		System.out.println(Nume);
 		
 	}
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
+		
+	}
+	
 }

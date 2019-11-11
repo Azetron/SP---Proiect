@@ -1,4 +1,4 @@
-package l6;
+package l3;
 
 public class ImageProxy implements Element{
 		public String Nume;
@@ -22,6 +22,12 @@ public class ImageProxy implements Element{
 			}
 			realImage.print();
 			
-		}		
+		}
+		@Override
+		public void accept(Visitor v) {
+			v.visit(this);
+			
+		}
+			
 		
 }

@@ -1,4 +1,4 @@
-package l6;
+package l3;
 
 public class Paragraph implements Element{
 	public String Nume;
@@ -31,4 +31,10 @@ public class Paragraph implements Element{
 	public void setAlignStrategy(AlignStrategy As) {
 		this.As=As;
 	}
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
+		
+	}
+	
 }
